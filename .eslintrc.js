@@ -59,7 +59,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    // 'linebreak-style': ['error', 'windows'],
+    'linebreak-style': ['error', 'windows'],
     '@next/next/no-img-element': 'off',
   },
 }

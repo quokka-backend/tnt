@@ -8,7 +8,7 @@ const Index = ({ data, project }) => <Home data={data} project={project} />
 
 export default Index
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const url = process.env.LOCAL_URL
   let data = {}
   let project = {}
@@ -31,6 +31,5 @@ export async function getStaticProps() {
       data,
       project,
     },
-    revalidate: 1,
   }
 }
