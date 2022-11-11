@@ -1,0 +1,713 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "GothamBold";
+    src: url('../fonts/GothamBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamBoldItalic';
+    src: url('../fonts/GothamBoldItalic.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'GothamUltra';
+    src: url('../fonts/gotham-ultra.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'GothamLight';
+    src: url('../fonts/GothamLight.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'GothamLightItalic';
+    src: url('../fonts/GothamLightItalic.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('../fonts/GothamMedium.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'GothamMediumItalic';
+    src: url('../fonts/GothamMediumItalic.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('../fonts/GothamBold.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Moscato-Script';
+    src: url('../fonts/Moscato-Script.otf');
+
+}
+
+@font-face {
+    font-family: 'Giordano';
+    src: url('../fonts/Giordano.ttf');
+
+}
+
+@font-face {
+    font-family: 'Avenir-Next-Condensed';
+    src: url('../fonts/Avenir-Next-Condensed.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'Mada-Bold';
+    src: url('../fonts/Mada-Bold.ttf') format('truetype');
+
+}
+
+:root {
+    --fs-1000: 200px;
+    /* --fs-900: 188px; */
+    --fs-900: clamp(6.25rem, 15vw + 1rem, 11.75rem);
+    --fs-850: clamp(3.438rem, 14vw + 1rem, 6.25rem);
+    --fs-800: clamp(16px, 3vw + 0.5rem, 80px);
+    --fs-700: clamp(2.438rem, 7vw, 4.563rem);
+    --fs-600: clamp(3.254rem, 7vw, 4.375rem);
+    --fs-550: clamp(1.254rem, 7vw, 2.188rem);
+    --fs-500: clamp(1.254rem, 7vw, 1.563rem);
+    /* --fs-400: clamp(15px, 1vw + 1rem, 30px); */
+    --fs-400: clamp(15px, 1.2vw + 1rem, 30px);
+    --fs-380: clamp(18px, 1vw + 1rem, 1.125em);
+    --fs-370: clamp(1em, 1vw + 1rem, 1.25em);
+    --fs-360: clamp(1em, 1vw + 1rem, 1em);
+    --fs-350: 0.875rem;
+    --fs-300: 12px;
+    --fs-200: 10px;
+
+    --em-400: 5.2em;
+    --em-800: 8em;
+    --em-900: 9.75em;
+    --em-700: 7.75em;
+
+    --lh-100: clamp(3.254rem, 15vw, 6.096rem);
+    --lh-96: clamp(1.5rem, 8vw, 6rem);
+
+    --fs-xl: clamp(2.438rem, 7vw, 4.563rem);
+    --fs-xl-100: clamp(3.75rem, 7vw, 6.25rem);
+    /* --w-clamp:clamp(min(10vw, 20rem), 300px, max(90vw, 55rem)); */
+    --initial-width: clamp(12.5rem, 100vw, 90rem);
+
+    /* banner  */
+    --mg-t: clamp(3.75em, 15vw, 9.75em);
+    --mg-b: clamp(15em, 15vw, 15em);
+    --mg-b-135: clamp(4em, 15vw, 8.483em);
+    --h1-lh: clamp(3.254rem, 15vw, 6.091rem);
+    --pl-title: clamp(3.438em, 15vw, 8.625em);
+    --pr-title: clamp(1.25em, 15vw, 1.188em);
+    --m-arrow: clamp(5.313em, 15vw, 5.313em);
+
+    /* belief */
+    --mg-b-100: clamp(4.438em, 15vw, 12.188em);
+    --mg-100: clamp(7.375em, 15vw, 7.375em);
+
+    /* partial client  */
+    --mg-t-75: clamp(4.688em, 15vw, 4.688em);
+    --mg-b-75: clamp(4.688em, 15vw, 4.688em);
+    --grid-width: clamp(4rem, 100vw, 65%);
+
+    --pd-y-50: clamp(0.75em, 15vw, 3.125em);
+    --pd-x-28: clamp(0.75em, 15vw, 1.75em);
+    --width-149: clamp(1em, 15vw, 9.313em);
+    --height-149: clamp(1em, 15vw, 9.313em);
+
+    --width-636: clamp(1em, 100vw, 39.758em);
+    --height-643: clamp(1em, 100vw, 40.246em);
+
+
+    /* whatwedo  */
+    --py-15: clamp(0.938em, 15vw, 0.5em);
+    --width-325: clamp(12.5rem, 100vw, 20.313rem);
+
+
+    /* magical years */
+    --width-774: clamp(12.5rem, 70vw, 48.375rem);
+    --width-1069: clamp(12.5rem, 100vw, 66.843rem);
+
+/* footer  */
+    --width-453: clamp(12.5rem, 100vw, 28.313rem);
+    --pd-y-10: clamp(0.75em, 15vw, 10.563em);
+    --pd-y-4: clamp(0.75em, 15vw, 3.563em);
+    --pd-y-43: clamp(0.75em, 15vw, 4.313em);
+    --pd-y-25: clamp(0.75em, 15vw, 1.563em);
+}
+
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+    /* padding-bottom: 10em; */
+    font-family: 'Gotham';
+    background-color: black;
+    color: white;
+    width: var(--initial-width);
+    margin: auto;
+    /* border: 1px solid red; */
+    overflow-x:hidden;
+}
+
+
+
+h1 {
+    font-family: 'GothamBold';
+    font-weight: 700;
+    /* font-size: 73px;  */
+    font-size: var(--fs-xl);
+    /* line-height: 77px; */
+    line-height:var(--lh-100)
+}
+
+#container-belief h1 {
+    font-family: 'Mada-Bold';
+    font-size: 6rem;
+
+}
+
+#container-belief .content-wrapper {
+    margin: 0 var(--mg-100);
+    margin: var(--mg-100) 0;
+}
+
+#container-belief .content-wrapper h2 {
+    font-family: 'Avenir-Next-Condensed';
+    font-size: var(--fs-850);
+    font-weight: bolder;
+    letter-spacing: 0.5rem;
+    line-height: 5.63rem;
+}
+
+#container-whatWeDo h5 {
+    font-family: "GothamBold";
+    font-size: var(--fs-500);
+}
+
+#container-whatWeDo span,
+.brand-strategy-content span {
+    font-family: "GothamMedium";
+    font-size: var(--fs-350);
+}
+
+#container-whatWeDo .service-box {
+    padding: var(--py-15);
+}
+
+.brand-strategy-content h4 {
+    font-size: var(--fs-370);
+}
+
+#container-PartialClient {
+    margin-bottom: var(--mg-b-135);
+}
+
+
+#container-belief span,
+#container-PartialClient p {
+    font-family: 'GothamMedium';
+    font-size: 10px;
+    line-height: 0.90rem;
+}
+
+.partial-client-list .grid-width {
+    width: var(--grid-width);
+}
+
+.partial-client-list .grid-box {
+    width: var(--width-149);
+    height: var(--height-149);
+    
+}
+
+
+.partial-client-list .grid-display {
+    width: var(--width-636);
+    height: var(--height-643);
+
+}
+
+.navSlide{
+    animation: slide 0.2s linear forwards;
+}
+@keyframes slide {
+    100% {
+      width: 100vw;
+    }
+  }
+
+#container-PartialClient .partialClient-subtitle {
+    margin-top: var(--mg-t-75);
+    margin-bottom: var(--mg-b-75);
+    padding-left: var(--pl-title);
+    width: 21.5rem;
+}
+
+#container-belief .eye-title {
+    margin-bottom: 3.625em;
+}
+
+#container-belief .eye-content {
+    height: 7.5rem;
+   
+}
+
+#container-belief .eye-content .belief-title {
+    font-size: 3rem;
+}
+
+
+
+#container-footer{
+    background-color: #0F0F0F;
+}
+
+.bottom-footer{
+    background-color: #0F0F0F;
+}
+
+#container-footer .work-together-wrapper span{
+    font-family: 'GothamUltra';
+    font-size: var(--fs-600);
+    line-height: 84px;
+    text-decoration: underline;
+}
+
+#container-footer .work-together-wrapper p{
+  font-family: 'GothamMedium';
+    font-size: var(--fs-360);
+    line-height: 29.2px;
+
+    
+}
+#container-footer .work-together-wrapper{
+    padding: var(--pd-y-10) 0px;  
+  }
+
+#container-footer .address-wrapper p{
+    font-family: 'GothamMedium';
+      font-size: var(--fs-360);
+      line-height: 21.31px;
+  
+      
+  }
+
+  #container-footer .social-link-wrapper h4{
+font-size: var(--fs-380);
+line-height: 29.29px;
+  }
+
+
+
+
+ 
+
+  #container-footer .address-wrapper{
+
+width: var(--width-453);
+padding: var(--pd-y-43) 20px;
+      
+  }
+
+  #container-footer .image-wrapper{
+
+    padding: var(--pd-y-4) 0px;
+      }
+    
+
+#container-footer .address-wrapper span{
+    font-family: 'GothamUltra';
+      font-size: var(--fs-550);
+      line-height: 42px;
+      font-style: ultra;
+  
+      
+  }
+  .bottom-footer{
+    padding: var(--pd-y-25) 0px;
+  }
+
+.bottom-footer span{
+    font-family: 'GothamMedium';
+font-size: var(--fs-360);
+  }
+  .bottom-footer p{
+    font-size: var(--fs-200);
+      }
+
+
+.brand-strategy-content {
+    top: 50%;
+    left: 50%;
+    width: var(--width-325);
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.marquee {
+    position: absolute;
+    width: 100vw;
+    max-width: 95%;
+    height: 30px;
+    overflow-x: hidden;
+    /* background: red; */
+}
+
+.marquee-left {
+    position: absolute;
+    width: 100%;
+    max-width: 95%;
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    /* background: red; */
+    transform: rotate(90deg);
+
+}
+
+.marquee-right {
+    position: absolute;
+    width: 100%;
+    /* max-width: 82%; */
+    max-width: 95%;
+    height: 100%;
+    overflow-x: hidden;
+    /* background: red; */
+    transform: rotate(90deg);
+    bottom: 5px;
+}
+
+.marquee-bottom {
+    position: absolute;
+    width: 100%;
+    max-width: 95%;
+    height: 30px;
+    overflow-x: hidden;
+    bottom: 5px;
+    /* background: red; */
+}
+
+.marquee-right .track {
+    animation-direction: reverse;
+}
+
+.marquee-right .track {
+    bottom: 23px;
+}
+
+.marquee-left .track {
+    top: 5px;
+}
+
+.marquee-bottom .track {
+
+    animation-direction: reverse;
+}
+
+.track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+h1>span {
+    font-family: 'GothamLightItalic';
+    font-weight: 600;
+    /* font-size: 73px;  */
+    font-size: var(--fs-700);
+    line-height: 52px;
+
+}
+
+span {
+    font-family: 'Mada-Bold';
+    /* font-size: 200px */
+    font-size: var(--fs-1000);
+}
+
+
+h2:hover {
+    font-family: 'GothamLightItalic';
+    font-weight: 300;
+    /* font-size: 80px;  */
+    font-size: var(--fs-800);
+    line-height: 96px;
+}
+
+h2 {
+    font-family: 'GothamLight';
+    font-weight: 300;
+    /* font-size: 80px;  */
+    font-size: var(--fs-800);
+    line-height:var(--lh-96);
+}
+
+
+
+
+h3 {
+    font-family: 'Giordano';
+    font-weight: 500;
+    /* font-size: 128px; */
+    font-size: var(--fs-900);
+    line-height: 40.05px;
+    letter-spacing: 12px;
+}
+
+h4 {
+    font-family: 'GothamMedium';
+    font-weight: 350;
+    /* font-size: 30px; */
+    font-size: var(--fs-400);
+    line-height: 40px;
+    letter-spacing: 10px;
+}
+
+.about-us h4 {
+    letter-spacing: 0;
+}
+
+p {
+    font-family: 'GothamLight';
+    font-weight: 300;
+    font-style: normal;
+    /* font-size: 10px; */
+    font-size: var(--fs-200);
+    line-height: 14px;
+
+}
+
+nav p,
+.brand-strategy-content p {
+    font-size: var(--fs-300);
+}
+
+nav .grid {
+    height: var(--em-400);
+
+}
+
+.menu-wrapper{
+    
+    span{
+        line-height: 5rem;
+    }
+    a{
+        font-size: var(--fs-700);
+        line-height: 0;
+    }
+}
+
+.pointer {
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.nav-close div {
+    width: 2.5rem;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 6px;
+    border-radius: 2rem 2rem;
+}
+
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    width: 0%;
+    height: 100vh;
+    background-color: white;
+
+}
+
+
+.sidebar-action {
+    position: absolute;
+    top: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+
+}
+#container-magical-year{
+    padding-bottom: var(--mg-b-135);
+}
+#container-magical-year .container-main  span {
+    font-family: 'GothamBold';
+    font-weight: 700;
+    /* font-size: 73px;  */
+    font-size: var(--fs-xl-100);
+    line-height: 77px;
+ 
+
+}
+#container-magical-year .container-main .magical-title {
+
+    width: var(--width-774);
+
+}
+
+#container-magical-year .container-main .card-stack {
+
+    top: 100%;
+    right: 50%;
+  
+}
+
+.card-stack div:nth-child(1) {
+    margin-top: 24px;
+}
+
+.card-stack div:nth-child(2) {
+    /* margin-top: 136px; */
+}
+
+.card-stack div:nth-child(3) {
+    margin-top: 135.59px;
+}
+
+.card-stack div:nth-child(4) {
+    margin-top: 104px;
+}
+
+
+
+
+#container-hero .container-main {
+    margin-top: var(--mg-t);
+    margin-bottom: var(--m-arrow);
+
+}
+
+#container-hero .container-main>.grid {
+    padding-left: 1.625rem;
+    padding-right: 1.5rem;
+}
+
+/* #container-hero .container-main > .grid > .title-wrapper{
+    padding-left: 2em;
+} */
+
+#container-magical-year .container-main {
+    margin-top: var(--mg-t);
+    margin-bottom: var(--mg-t);
+    /* width: var(--width-774); */
+    line-height: 103.2px;
+}
+
+
+
+
+
+
+
+@media (min-width:768px) {
+    .pointer {
+        height: 10px;
+        width: 10px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    #container-hero .container-main>.grid {
+        padding-left: var(--pl-title);
+        padding-right: var(--pr-title);
+
+    }
+
+    h1 {
+        font-family: 'GothamBold';
+        font-weight: 700;
+        /* font-size: 73px;  */
+        font-size: var(--fs-xl);
+        line-height: var(--h1-lh);
+    }
+
+    h1>span {
+        font-family: 'GothamLightItalic';
+        font-weight: 600;
+        /* font-size: 73px;  */
+        font-size: var(--fs-700);
+        line-height: 97.45px;
+
+    }
+
+    #container-hero .container-main>.grid>.title-wrapper>.title {
+        padding-top: 2em;
+    }
+
+    .view-all-arrow h4 {
+        letter-spacing: 0px;
+    }
+    #container-magical-year .container-main .card-stack {
+        transform: translate(50%, -50%);
+        width: var(--width-1069);
+    }
+    .card-stack div:nth-child(2) {
+        margin-top: 136px;
+    }
+   
+
+}
+
+
+.arrow-down {
+    margin: var(--m-arrow);
+}
+
+#panel-container {
+    background-size: cover;
+    transform: perspective(400px) rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
+    box-shadow: 1.5rem 2.5rem 5rem 0.7rem rgba(0, 0, 0, 0.13);
+}
+
+
+
+
+/* slider animation  */
+
+
+
